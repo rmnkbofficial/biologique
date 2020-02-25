@@ -1,0 +1,136 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'destyle.css';
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  display: block;
+  position: relative;
+}
+
+button {
+  -webkit-appearance: button;
+}
+
+a:active,
+a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.center-text-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.center-text {
+  align-self: center;
+  font-size: 2.625rem;
+  text-align: center;
+}
+
+.glow {
+  color: #ffede5;
+}
+
+.background-glow {
+  background-color: #ffede5;
+}
+
+.red {
+  color: #a63446;
+}
+
+.background-red {
+  background-color: #a63446;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.background-white {
+  background-color: #ffffff;
+}
+
+.blue {
+  color: #2f30be;
+}
+
+.background-blue {
+  background-color: #2f30be;
+}
+
+.rozha {
+  font-family: 'Rozha One';
+  font-weight: 400;
+}
+
+.dm200 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 200;
+  direction: ltr;
+}
+
+.dm300 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  direction: ltr;
+}
+
+.dm500 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  direction: ltr;
+}
+
+.dm700 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  direction: ltr;
+}
+
+.section-text-shadow {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}

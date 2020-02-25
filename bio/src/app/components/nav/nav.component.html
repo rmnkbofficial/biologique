@@ -1,0 +1,89 @@
+<div>
+  <mat-toolbar class="navbar">
+    <a href="/"> <img class="logo" src="../../../assets/codebio-logo.svg"/></a>
+    <ul title="Main Menu" class="nav-list" fxShow="true" fxHide.lt-md>
+      <li class="nav-item">
+        <a href="/offres" class="nav-link red dm700">Nos offres</a>
+      </li>
+      <li class="nav-item">
+        <a href="/compte" class="nav-link red dm700">Mon compte</a>
+      </li>
+    </ul>
+    <button
+      mat-icon-button
+      [disableRipple]="true"
+      class="navbar-mobile-toggle"
+      (click)="sidenav.toggle()"
+      fxShow="true"
+      fxHide.gt-sm
+      aria-label="Side nav toggle icon"
+    >
+      <mat-icon class="navbar-mobile-icon red dm700">menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="sidenav-container">
+    <mat-sidenav
+      class="sidenav background-red dm700"
+      position="end"
+      #sidenav
+      fixedInViewport="true"
+    >
+      <mat-nav-list fxLayout="column">
+        <ul title="Main Menu">
+          <li class="nav-item">
+            <a href="/compte" class="sidenav-link red dm700">Nos offres</a>
+          </li>
+          <li class="nav-item">
+            <a href="/compte" class="sidenav-link red dm700">Mon compte</a>
+          </li>
+        </ul>
+        <ul
+          fxLayout="row"
+          class="navbar-mobile-socials"
+          fxLayoutAlign="space-between"
+        >
+          <li class="navbar-social-item">
+            <a
+              href="https://twitter.com/"
+              class="navbar-mobile-link"
+              rel="noopener nofollow"
+              target="_blank"
+              ><img
+                src="../../assets/twitter-icon.svg"
+                class="navbar-social-icon"
+              />
+              <span class="homepage-link">Twitter</span></a
+            >
+          </li>
+          <li class="navbar-social-item">
+            <a
+              href="https://www.instagram.com/"
+              rel="noopener nofollow"
+              target="_blank"
+              class="navbar-mobile-link"
+              ><img
+                src="../../assets/instagram-icon.svg"
+                class="navbar-social-icon"
+              />
+              <span class="homepage-link">Instagram</span></a
+            >
+          </li>
+          <li class="navbar-social-item">
+            <a
+              href="https://www.facebook.com/"
+              rel="noopener nofollow"
+              target="_blank"
+              class="navbar-mobile-link"
+              ><img
+                src="../../assets/facebook-icon.svg"
+                class="navbar-social-icon"
+              />
+              <span class="homepage-link">Facebook</span></a
+            >
+          </li>
+        </ul>
+      </mat-nav-list>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>
