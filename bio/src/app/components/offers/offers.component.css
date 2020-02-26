@@ -1,0 +1,69 @@
+.title-section {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 110vh;
+  padding: 0 5%;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-image: url('../../../assets/banana.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  padding-top: 8rem;
+}
+
+h2 {
+  font-size: 2.75rem;
+}
+
+.subscription-card {
+  width: 28rem;
+  height: 28rem;
+  margin: 5rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #ffede5 50%);
+}
+
+.card-content {
+  height: 15rem;
+  padding: 1rem;
+}
+
+.card-info {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.card-conditions {
+  font-size: 1rem;
+  margin: 2rem;
+}
+
+.card-actions {
+  margin: 2rem;
+}
+
+.card-button {
+  font-size: 1.25rem;
+  min-height: 3rem;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.subscription-unit {
+  color: grey;
+}

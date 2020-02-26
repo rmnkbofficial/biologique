@@ -7,13 +7,6 @@
   overflow: hidden;
 }
 
-#home {
-  display: flex;
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
 #landing-hero {
   width: 100%;
   height: auto;
@@ -28,15 +21,22 @@
   transform: translate(-50%, -50%);
 }
 
-.subtitle {
-  padding: 2rem;
-  z-index: 999;
-  font-style: normal;
-  margin: auto;
-  margin-top: 17%;
+.subtitle-wrapper {
+  z-index: 1;
   font-size: 3.75rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 75rem;
+}
+
+.subtitle {
+  font-style: normal;
   text-align: center;
-  width: 70%;
+  margin: 1.25rem auto 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
@@ -45,12 +45,10 @@ h3 {
 }
 
 .cta-button {
-  width: 22%;
-  min-height: 3rem;
   padding: 1rem;
-  pointer-events: none;
-  text-align: right;
-  font-size: 4.75rem;
+  font-size: 1rem;
   line-height: 1.4;
   text-shadow: 1px 1px 2px rgba(197, 183, 183, 0.48);
+
+  min-width: 22rem;
 }

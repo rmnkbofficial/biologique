@@ -6,19 +6,38 @@
         <a href="/offres" class="nav-link red dm700">Nos offres</a>
       </li>
       <li class="nav-item">
-        <a href="/compte" class="nav-link red dm700">Mon compte</a>
+        <a href="/cadeaux" class="nav-link red dm700">Cartes cadeaux</a>
       </li>
     </ul>
+
     <button
       mat-icon-button
+      class="navbar-icon-button"
+      fxShow="true"
+      fxHide.sm="true"
+      aria-label="Side nav login/signup button"
+    >
+      <mat-icon class="navbar-icon red">account_circle</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="navbar-icon-button"
+      fxShow="true"
+      fxHide.sm="true"
+      aria-label="Side nav toggle icon"
+    >
+      <mat-icon class="navbar-icon red">shopping_cart</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="navbar-toggle"
       [disableRipple]="true"
-      class="navbar-mobile-toggle"
       (click)="sidenav.toggle()"
       fxShow="true"
       fxHide.gt-sm
-      aria-label="Side nav toggle icon"
+      aria-label="Side nav cart icon"
     >
-      <mat-icon class="navbar-mobile-icon red dm700">menu</mat-icon>
+      <mat-icon class="navbar-icon red">menu</mat-icon>
     </button>
   </mat-toolbar>
 
@@ -29,15 +48,29 @@
       #sidenav
       fixedInViewport="true"
     >
-      <mat-nav-list fxLayout="column">
-        <ul title="Main Menu">
-          <li class="nav-item">
-            <a href="/compte" class="sidenav-link red dm700">Nos offres</a>
+      <mat-nav-list>
+        <ul title="Main Menu" fxLayout="column">
+          <li class="nav-item glow">
+            <a href="/offres" class="sidenav-link dm700">Nos offres</a>
           </li>
-          <li class="nav-item">
-            <a href="/compte" class="sidenav-link red dm700">Mon compte</a>
+          <li class="nav-item glow">
+            <a href="/cadeaux" class="sidenav-link dm700">Cartes cadeaux</a>
           </li>
         </ul>
+        <button
+          mat-icon-button
+          class="cart-icon"
+          aria-label="Side nav login/signup button"
+        >
+          <mat-icon class="sidenav-link glow">account_circle</mat-icon>
+        </button>
+        <button
+          class="cart-icon"
+          mat-icon-button
+          aria-label="Side nav cart icon"
+        >
+          <mat-icon class="sidenav-link glow">shopping_cart</mat-icon>
+        </button>
         <ul
           fxLayout="row"
           class="navbar-mobile-socials"

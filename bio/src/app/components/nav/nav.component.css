@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   min-height: 6rem;
-  padding: 0.5rem;
 }
 
 .logo {
@@ -16,8 +15,7 @@
 }
 
 .nav-list {
-  margin: 0;
-  padding: 0;
+  margin-left: 20rem;
 }
 
 .nav-item {
@@ -60,7 +58,7 @@ a {
 }
 
 .sidenav-item:active {
-  color: #db2b39;
+  color: #2f30be;
 }
 
 .mat-drawer-container {
@@ -72,21 +70,26 @@ a {
   height: 100%;
 }
 
-.navbar-logo {
-  padding-left: 1rem;
-}
-
-.navbar-mobile-toggle {
+.navbar-toggle {
   padding: 4rem;
   padding-top: 1.75rem;
 }
 
-.navbar-mobile-icon:active {
-  color: #db2b39;
+.navbar-icon:active {
+  color: #2f30be;
 }
 
-.navbar-mobile-icon {
-  font-size: 3rem;
+.navbar-icon-button {
+  padding-right: 2rem;
+}
+
+.navbar-icon {
+  font-size: 2rem;
+}
+
+.navbar-icon:hover,
+.navbar-icon:active {
+  color: #2f30be;
 }
 
 .navbar-mobile-link {
@@ -118,4 +121,8 @@ a {
 
 .separator {
   padding: 1rem;
+}
+
+.cart-icon {
+  padding-left: 2rem;
 }

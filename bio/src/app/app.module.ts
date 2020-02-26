@@ -4,6 +4,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
@@ -19,9 +20,16 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { NavComponent } from './components/nav/nav.component';
+import { OffersComponent } from './components/offers/offers.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, LandingComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    LandingComponent,
+    FooterComponent,
+    OffersComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +37,7 @@ import { NavComponent } from './components/nav/nav.component';
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
+    MatCardModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
