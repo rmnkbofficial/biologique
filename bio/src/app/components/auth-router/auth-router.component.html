@@ -1,0 +1,44 @@
+<section
+  class="section background-glow"
+  fxLayout="column"
+  fxLayoutAlign="center"
+>
+  <h1 class="red center-text dm700">
+    Hi! Please enter your email address.
+  </h1>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <form [formGroup]="emailForm">
+      <mat-form-field>
+        <input
+          #input
+          matInput
+          formControlName="email"
+          placeholder="Email"
+          type="email"
+          name="email"
+          autocomplete="email"
+          (keydown.enter)="checkEmailExists(input.value)"
+          email
+          required
+        />
+      </mat-form-field>
+    </form>
+  </div>
+  <div fxLayoutAlign="center">
+    <button
+      mat-raised-button
+      type="submit"
+      value="Next"
+      class="dm700 background-red glow"
+      (click)="checkEmailExists(input.value)"
+      [disabled]="emailForm.invalid"
+    >
+      Next
+    </button>
+  </div>
+  <h3 class="auth-link dm700">
+    <a href="/password" class="red auth-link" fxLayoutAlign="center">
+      Forgot password?</a
+    >
+  </h3>
+</section>

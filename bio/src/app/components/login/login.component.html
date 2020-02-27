@@ -1,0 +1,34 @@
+<section
+  class="section background-glow"
+  fxLayout="column"
+  fxLayoutAlign="center"
+>
+  <h1 class="red center-text dm700">Welcome back, {{ user.displayName }} !</h1>
+  <h1 class="red center-text dm700">Sign in using your password.</h1>
+  <form fxLayout="column" fxLayoutAlign="center center">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        [(ngModel)]="password"
+        type="password"
+        name="password"
+        autocomplete="current-password"
+        (keydown.enter)="login()"
+        required
+      />
+    </mat-form-field>
+  </form>
+  <div fxLayoutAlign="center">
+    <button
+      class="background-red glow dm700"
+      mat-raised-button
+      (click)="login()"
+    >
+      Log in
+    </button>
+  </div>
+  <h3 class="auth-link dm700">
+    <a href="/password" class="red" fxLayoutAlign="center"> Forgot password?</a>
+  </h3>
+</section>

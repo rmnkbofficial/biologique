@@ -1,0 +1,57 @@
+<section
+  class="section background-glow"
+  fxLayout="column"
+  fxLayoutAlign="center"
+>
+  <h1 class="red center-text dm700">Oh hello!</h1>
+  <h2 class="red dm700" fxLayoutAlign="center center">
+    New here? Let's make you an account! Not new? Check that your email was
+    entered correctly. (Hey, nobody's perfect).
+  </h2>
+  <form fxLayout="column" fxLayoutAlign="center center">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Prénom"
+        [(ngModel)]="firstName"
+        type="text"
+        name="firstName"
+        autocomplete="name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Nom"
+        [(ngModel)]="lastName"
+        type="text"
+        name="lastName"
+        autocomplete="family-name"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        [(ngModel)]="password"
+        type="password"
+        name="password"
+        autocomplete="new-password"
+        (keydown.enter)="signup()"
+        required
+      />
+    </mat-form-field>
+  </form>
+  <div fxLayoutAlign="center">
+    <button
+      class="background-red glow dm700"
+      mat-raised-button
+      (click)="signup()"
+    >
+      Sign up
+    </button>
+  </div>
+</section>

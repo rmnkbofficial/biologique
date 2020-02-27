@@ -1,0 +1,9 @@
+:host ::ng-deep .mat-form-field {
+  width: 50vw !important;
+  padding: 1rem;
+}
+
+h3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
