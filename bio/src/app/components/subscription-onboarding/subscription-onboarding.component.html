@@ -1,0 +1,33 @@
+<section
+  class="section background-glow"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+>
+  <h4 class="p600">{{ stepNumber }}</h4>
+  <h1 class="rozha">{{ stepTitle }}</h1>
+  <div [@slideInOut] *ngIf="state === 'home'">
+    <button
+      mat-raised-button
+      class="background-white subscription-button p700"
+      (click)="goTo('myself')"
+    >
+      Moi
+    </button>
+    <button
+      mat-raised-button
+      class="background-white subscription-button p700"
+      (click)="goTo('friend')"
+    >
+      Une amie
+    </button>
+  </div>
+</section>
+  <div class="gift-component" [@slideInOut] *ngIf="state === 'friend'">
+    <app-gift-card></app-gift-card>
+  </div>
+  <div [@slideInOut] *ngIf="state === 'myself'">
+    <div fxLayout="row">
+      <app-monthly-card></app-monthly-card> <app-yearly-card></app-yearly-card>
+    </div>
+  </div>
+

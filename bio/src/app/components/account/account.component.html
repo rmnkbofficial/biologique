@@ -1,10 +1,10 @@
 <section class="section background-glow">
   <div class="header" fxLayout="column" fxLayoutAlign="start start">
-    <h1 class="dm700 red">
+    <h1 class="p700 ">
       Bonjour,
-      {{ authService.userData ? authService.userData.displayName : 'User' }} !
+      {{ authService.userData ? authService.userData.displayName : 'toi' }} !
     </h1>
-    <h2 class="dm700 red">
+    <h2 class="p700 ">
       It's nice to see you here.
     </h2>
     <mat-tab-group
@@ -13,30 +13,41 @@
       fxLayout="column"
       dynamicHeight
     >
-      <mat-tab label="Ton Inscription">
+      <mat-tab label="Mon abonnement">
         <div
           *ngIf="!user.subscriptionType"
           class="tab-section background-white"
           fxLayoutAlign="center center"
           fxLayout="column"
         >
-          <h3 class="dm700 red">
+          <h3 class="p700 ">
             AUCUN ABONNEMENT ENREGISTRÉ
-          </h3>
-          <h3 class="dm700 red">
-            Vous souhaitez obtenir des livraisons continues de produits de
-            beauté d'origine locale? C'est * hyper * pratique.
           </h3>
         </div>
       </mat-tab>
-      <mat-tab label="Ton profil">
+      <mat-tab label="Mon profil">
         <div class="tab-section background-white" fxLayout="row">
-          <h3 class="dm700 red" fxLayoutAlign="center center">Tes détails</h3>
+          <h3 class="p700 " fxLayoutAlign="center center">Mes détails</h3>
           <div class="user-info" fxLayout="column" fxLayoutAlign="center start">
-            <p class="dm700 red">{{ user.displayName }}</p>
-            <p class="dm700 red">{{ user.email }}</p>
-            <p class="dm700 red">********</p>
+            <p class="p700 ">{{ user.displayName }}</p>
+            <p class="p700 ">{{ user.email }}</p>
+            <p class="p700 ">********</p>
           </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Déconnexion">
+        <div
+          class="tab-section background-glow"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+        >
+          <button
+            class="p700 background-red glow"
+            mat-raised-button
+            (click)="authService.signOut()"
+          >
+            Déconnexion
+          </button>
         </div>
       </mat-tab>
     </mat-tab-group>

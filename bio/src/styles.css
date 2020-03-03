@@ -107,27 +107,27 @@ textarea {
   font-weight: 400;
 }
 
-.dm200 {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 200;
-  direction: ltr;
-}
-
-.dm300 {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  direction: ltr;
-}
-
-.dm500 {
-  font-family: 'DM Sans', sans-serif;
+.p500 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   direction: ltr;
 }
 
-.dm700 {
-  font-family: 'DM Sans', sans-serif;
+.p600 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  direction: ltr;
+}
+
+.p700 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  direction: ltr;
+}
+
+.p00 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
   direction: ltr;
 }
 
@@ -158,8 +158,66 @@ textarea {
   -webkit-box-align: center;
   align-items: center;
   position: relative;
-  height: 100vh;
   min-height: 100vh;
   text-align: center;
   overflow: hidden;
+  padding-top: 8rem;
+}
+
+.auth-link {
+  font-size: 1.25rem;
+}
+
+.auth-link:hover {
+  color: #2f30be;
+}
+
+.subscription-card {
+  width: 28rem;
+  height: 28rem;
+  margin: 5rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #ffede5 50%);
+}
+
+.card-content {
+  height: 15rem;
+  padding: 1rem;
+}
+
+.card-info {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: grey;
+}
+
+.card-conditions {
+  font-size: 1rem;
+  margin: 2rem;
+}
+
+.card-actions {
+  margin: 2rem;
+}
+
+.card-button {
+  font-size: 1.25rem;
+  min-height: 3rem;
+}
+
+.title-section {
+  height: 100vh;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0 5%;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }

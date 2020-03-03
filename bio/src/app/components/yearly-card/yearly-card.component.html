@@ -1,0 +1,26 @@
+<mat-card class="subscription-card p700">
+  <mat-card-header fxLayoutAlign="center center">
+    <mat-card-title class="card-title">Annuellement Bio</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="card-content">
+    <p>
+      <span class="price">24,99€</span>
+      <span class="subscription-unit"> la 1ère box !</span>
+    </p>
+
+    <p class="card-info">Puis 26,99€ / mois</p>
+    <p class="card-info">Engagement 12 mois</p>
+    <div class="card-conditions">
+      <p>Livraison incluse</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <button
+      mat-raised-button
+      class="card-button p700 background-glow"
+      (click)="router.navigate(['checkout'])"
+    >
+      Je m'abonne
+    </button>
+  </mat-card-actions>
+</mat-card>

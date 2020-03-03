@@ -1,10 +1,10 @@
 <section class="section">
   <div id="hero-wrapper">
     <video
-      preload="none"
       webkit-playsinline
       playsinline
       x5-playsinline
+      preload="auto"
       autoplay
       muted
       loop
@@ -15,20 +15,21 @@
       <source src="../../assets/biologique.mp4" type="video/mp4" />
     </video>
   </div>
-  <div
-    class="subtitle-wrapper dm700 glow section-text-shadow"
-    fxLayout="column"
-  >
+  <div class="subtitle-wrapper p700 glow section-text-shadow" fxLayout="column">
     <h2>
       La box bio et naturelle
     </h2>
     <h2>
-      de nos artisans locaux
+      des artisans locaux
     </h2>
-    <h3>Made in France</h3>
+    <h3></h3>
     <div fxLayoutAlign="center">
-      <button mat-raised-button class="cta-button background-red glow dm700">
-        J'embarque
+      <button
+        mat-raised-button
+        class="cta-button background-red glow p700"
+        (click)="router.navigate(['bienvenue'])"
+      >
+        Bio'bienvenue
       </button>
     </div>
   </div>

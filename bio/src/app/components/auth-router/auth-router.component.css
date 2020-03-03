@@ -17,7 +17,7 @@ h3 {
 
 :host ::ng-deep .mat-form-field-label {
   color: #a63446 !important;
-  font-family: 'DM Sans', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 :host ::ng-deep .mat-form-field-underline .mat-form-field-ripple {

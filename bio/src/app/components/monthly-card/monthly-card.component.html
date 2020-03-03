@@ -1,0 +1,28 @@
+<mat-card class="subscription-card p700">
+  <mat-card-header fxLayoutAlign="center center">
+    <mat-card-title class="card-title">Tendancement Bio</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="card-content">
+    <p>
+      <span class="price">29,99€</span
+      ><span class="subscription-unit">/ mois</span>
+    </p>
+    <p class="card-info">
+      Vous recevez une box tous les mois
+    </p>
+    <p class="card-info">Sans engagement</p>
+    <div class="card-conditions">
+      <p>Résiliable en un clic à tout moment</p>
+      <p>Livraison incluse</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <button
+      mat-raised-button
+      class="card-button background-glow p700"
+      (click)="router.navigate(['checkout'])"
+    >
+      Je m'abonne
+    </button>
+  </mat-card-actions>
+</mat-card>

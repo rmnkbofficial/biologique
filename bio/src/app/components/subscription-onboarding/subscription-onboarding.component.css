@@ -1,0 +1,20 @@
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 2.75rem;
+}
+
+.subscription-button {
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 2.75rem;
+  margin: 4rem;
+  height: 28rem;
+  width: 28rem;
+}
+
+.gift-component {
+  width: 100%;
+}

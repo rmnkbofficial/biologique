@@ -1,0 +1,41 @@
+.title-section {
+  height: 110vh;
+  background-image: url('../../../assets/banana.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  padding-top: 8rem;
+}
+
+h2 {
+  font-size: 2.75rem;
+}
+
+.gift-title {
+  font-size: 2.75rem;
+  padding-top: 4rem;
+}
+
+.gift-body {
+  padding-bottom: 35px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 120px;
+  text-align: center;
+}
+
+.gift-content {
+  font-size: 1.25rem;
+  line-height: 25px;
+  max-width: 50rem;
+  margin: 20px auto 0px;
+  padding: 0px 0px 20px;
+}
+
+.gift-content p {
+  margin-top: 23px;
+  padding-bottom: 1rem;
+}

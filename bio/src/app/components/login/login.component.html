@@ -3,8 +3,8 @@
   fxLayout="column"
   fxLayoutAlign="center"
 >
-  <h1 class="red center-text dm700">Welcome back, {{ user.displayName }} !</h1>
-  <h1 class="red center-text dm700">Sign in using your password.</h1>
+  <h1 class="red center-text p700">Welcome back, {{ user.displayName }} !</h1>
+  <h1 class="red center-text p700">Sign in using your password.</h1>
   <form fxLayout="column" fxLayoutAlign="center center">
     <mat-form-field>
       <input
@@ -21,14 +21,14 @@
   </form>
   <div fxLayoutAlign="center">
     <button
-      class="background-red glow dm700"
+      class="background-red glow p700"
       mat-raised-button
       (click)="login()"
     >
       Log in
     </button>
   </div>
-  <h3 class="auth-link dm700">
+  <h3 class="auth-link p700">
     <a href="/password" class="red" fxLayoutAlign="center"> Forgot password?</a>
   </h3>
 </section>

@@ -1,10 +1,4 @@
-import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
-
-import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef, MatSnackBar } from '@angular/material';
-import { NavigationStart, Router, RouterEvent } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
 

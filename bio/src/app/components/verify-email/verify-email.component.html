@@ -3,7 +3,7 @@
   fxLayout="column"
   fxLayoutAlign="center"
 >
-  <h1 class="red center-text dm700 section-text-shadow">
+  <h1 class="red center-text p700 section-text-shadow">
     Thanks for joining Codebio!
   </h1>
 
@@ -12,11 +12,11 @@
     *ngIf="authService.userData as user"
     fxLayout="column"
   >
-    <h2 class="dm700">
+    <h2 class="p700">
       We have sent a confirmation email to <strong>{{ user.email }}</strong
       >.
     </h2>
-    <h2 class="dm700">
+    <h2 class="p700">
       Please check your email and click on the link to verify your email
       address.
     </h2>
@@ -26,14 +26,14 @@
     <button
       mat-raised-button
       type="button"
-      class="button dm700 glow background-red"
+      class="button p700 glow background-red"
       (click)="authService.sendVerificationMail()"
     >
       <i></i>
       Resend Verification Email
     </button>
   </div>
-  <h3 class="red dm700" fxLayoutAlign="center">
+  <h3 class="red p700" fxLayoutAlign="center">
     <a href="/" class="red auth-link"> Home</a>
   </h3>
 </section>
