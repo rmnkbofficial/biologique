@@ -1,4 +1,4 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import 'destyle.css';
 
 * {
@@ -222,9 +222,31 @@ textarea {
 .dialog-container .mat-dialog-container {
   margin: 2rem;
   padding: 0;
+  border-radius: 12px;
 }
 
 .cdk-global-scrollblock {
   position: static;
   overflow: hidden !important;
+}
+
+.banner {
+  width: 100vw;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  height: auto;
+  letter-spacing: 0.08em;
+  min-height: 40px;
+  text-transform: uppercase;
+}
+
+.banner p {
+  display: inline-block;
+  line-height: 20px;
+  padding: 10px 0px;
+}
+
+.pointer-event {
+  cursor: pointer;
 }

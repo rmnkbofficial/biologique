@@ -1,10 +1,10 @@
-<section class="section background-glow">
+<section class="section background-glow" fxLayoutGap="4rem">
   <div class="header" fxLayout="column" fxLayoutAlign="start start">
-    <h1 class="p700 ">
+    <h1 class="p700">
       Bonjour,
       {{ authService.userData ? authService.userData.displayName : 'toi' }} !
     </h1>
-    <h2 class="p700 ">
+    <h2 class="p700">
       It's nice to see you here.
     </h2>
     <mat-tab-group
@@ -37,7 +37,7 @@
       </mat-tab>
       <mat-tab label="Déconnexion">
         <div
-          class="tab-section background-glow"
+          class="tab-section background-white"
           fxLayout="row"
           fxLayoutAlign="center center"
         >

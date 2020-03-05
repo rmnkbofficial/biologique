@@ -23,10 +23,6 @@
   margin: 2rem;
 }
 
-.nav-link:hover {
-  color: #2f30be;
-}
-
 .nav-link,
 .sidenav-link {
   position: relative;
@@ -57,10 +53,6 @@ a {
   margin-bottom: 1rem;
 }
 
-.sidenav-item:active {
-  color: #2f30be;
-}
-
 .mat-drawer-container {
   position: unset !important;
 }
@@ -75,21 +67,12 @@ a {
   padding-top: 1.75rem;
 }
 
-.navbar-icon:active {
-  color: #2f30be;
-}
-
 .navbar-icon-button {
   padding-right: 2rem;
 }
 
 .navbar-icon {
   font-size: 2rem;
-}
-
-.navbar-icon:hover,
-.navbar-icon:active {
-  color: #2f30be;
 }
 
 .navbar-mobile-link {

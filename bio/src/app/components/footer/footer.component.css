@@ -1,0 +1,39 @@
+.footer {
+  line-height: 27px;
+  font-weight: 300;
+  max-width: 1840px;
+  overflow-x: hidden;
+  position: relative;
+  padding: 90px 40px;
+  margin: 0px auto;
+}
+
+.footer-column {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 20vw;
+  padding: 0px 26px;
+}
+
+.footer-column-subscribe {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  margin-left: 8.33333%;
+  margin-right: 8.33333%;
+  padding: 0px 10px;
+}
+
+.footer-accept {
+  margin-right: 0.5rem;
+}
+
+.footer-submit {
+  margin-top: 2rem;
+}
+
+.footer-form {
+  margin-top: 1rem;
+}

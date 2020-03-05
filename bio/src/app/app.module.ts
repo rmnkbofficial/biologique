@@ -5,7 +5,9 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule, MatDialogRef } from '@angular/material';
+import {
+    MAT_DIALOG_DEFAULT_OPTIONS, MatCheckboxModule, MatDialogModule, MatDialogRef
+} from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -28,6 +30,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { GiftCardDialogComponent } from './components/gift-card-dialog/gift-card-dialog.component';
+import { GiftCardRedeemComponent } from './components/gift-card-redeem/gift-card-redeem.component';
 import { GiftCardComponent } from './components/gift-card/gift-card.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
@@ -60,7 +63,8 @@ import { AuthService } from './services/auth.service';
     SubscriptionOnboardingComponent,
     CheckoutComponent,
     GiftCardComponent,
-    GiftCardDialogComponent
+    GiftCardDialogComponent,
+    GiftCardRedeemComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +82,7 @@ import { AuthService } from './services/auth.service';
     MatTabsModule,
     MatIconModule,
     MatListModule,
+    MatCheckboxModule,
     HttpClientModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
@@ -93,7 +98,7 @@ import { AuthService } from './services/auth.service';
       useValue: {}
     }
   ],
-  entryComponents: [GiftCardDialogComponent],
+  entryComponents: [GiftCardDialogComponent, GiftCardRedeemComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,0 +1,21 @@
+<div
+  class="gift-card-dialog-container background-glow"
+  aria-label="Code carte cadeau"
+  fxLayout="row"
+>
+  <img src="../../../assets/gift-card-6.jpeg" />
+  <form class="gift-card-form" fxLayout="column" [formGroup]="giftForm">
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="code"
+        placeholder="Code"
+        required
+        type="text"
+      />
+    </mat-form-field>
+    <button mat-raised-button type="submit" class="p600 background-red white">
+      Redeem
+    </button>
+  </form>
+</div>

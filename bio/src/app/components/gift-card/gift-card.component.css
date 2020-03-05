@@ -1,6 +1,6 @@
 .title-section {
   height: 110vh;
-  background-image: url('../../../assets/banana.jpeg');
+  background-image: url('../../../assets/banner.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,23 +38,6 @@ h2 {
 .gift-content p {
   margin-top: 23px;
   padding-bottom: 1rem;
-}
-
-.gift-banner {
-  width: 100vw;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  height: auto;
-  letter-spacing: 0.08em;
-  min-height: 40px;
-  text-transform: uppercase;
-}
-
-.gift-banner p {
-  display: inline-block;
-  line-height: 20px;
-  padding: 10px 0px;
 }
 
 .gift-subscription-card {
