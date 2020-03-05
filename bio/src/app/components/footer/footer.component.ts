@@ -9,6 +9,7 @@ import { GiftCardRedeemComponent } from '../gift-card-redeem/gift-card-redeem.co
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  currentYear = new Date().getFullYear();
   constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
