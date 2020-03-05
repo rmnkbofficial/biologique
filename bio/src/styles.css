@@ -178,7 +178,10 @@ textarea {
   margin: 5rem;
   padding: 2rem;
   text-align: center;
-  border-radius: 1.25rem;
+}
+
+.mat-card {
+  border-radius: 12px !important;
 }
 
 .card-title {

@@ -34,7 +34,7 @@ export class SubscriptionOnboardingComponent implements OnInit {
     switch (step) {
       case 'myself':
         this.stepNumber = 'ETAPE 2';
-        this.stepTitle = `Choisissez une boxe`;
+        this.stepTitle = `Choisissez une box`;
         break;
       case 'friend':
         this.stepNumber = '';
