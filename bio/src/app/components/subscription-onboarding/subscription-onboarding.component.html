@@ -21,13 +21,10 @@
       Une amie
     </button>
   </div>
-</section>
   <div class="gift-component" [@slideInOut] *ngIf="state === 'friend'">
     <app-gift-card></app-gift-card>
   </div>
-  <div [@slideInOut] *ngIf="state === 'myself'">
-    <div fxLayout="row">
-      <app-monthly-card></app-monthly-card> <app-yearly-card></app-yearly-card>
-    </div>
+  <div [@slideInOut] *ngIf="state === 'myself'" div fxLayout="row">
+    <app-monthly-card></app-monthly-card> <app-yearly-card></app-yearly-card>
   </div>
-
+</section>

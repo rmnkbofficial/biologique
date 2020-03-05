@@ -7,6 +7,9 @@
     </h1>
   </div>
 </section>
+<div class="background-red glow gift-banner">
+  <p class="p700">GIFT THE SUBSCRIPTION</p>
+</div>
 <section
   class="section gift-body background-glow p500"
   fxLayoutAlign="center center"
@@ -46,7 +49,52 @@
       </p>
     </div>
   </div>
-  <button mat-raised-button class="p700 background-red glow">
-    Je commence
-  </button>
+  <div class="gift-title rozha">
+    <p>How long should your gift last?</p>
+  </div>
+  <div
+    fxLayout="row"
+    class="gift-card-group"
+    fxLayoutAlign="center center"
+    fxLayoutGap="6rem"
+  >
+    <div fxLayout="column">
+      <mat-card
+        class="gift-subscription-card three-month-card"
+        fxLayoutAlign="center center"
+      >
+        <h2 class="gift-card-text p700">
+          <em>Let's gift</em>
+          <div>3 months</div>
+        </h2>
+      </mat-card>
+      <button
+        mat-raised-button
+        class="gift-button background-red white p600"
+        fxLayoutAlign="center center"
+        (click)="openDialog(3)"
+      >
+        $27 — Add to bag
+      </button>
+    </div>
+    <div fxLayout="column">
+      <mat-card
+        class="gift-subscription-card six-month-card"
+        fxLayoutAlign="center center"
+      >
+        <h2 class="gift-card-text p700">
+          <em>Let's gift</em>
+          <div>6 months</div>
+        </h2>
+      </mat-card>
+      <button
+        mat-raised-button
+        class="gift-button background-red white p600"
+        fxLayoutAlign="center center"
+        (click)="openDialog(6)"
+      >
+        $54 — Add to bag
+      </button>
+    </div>
+  </div>
 </section>

@@ -1,0 +1,66 @@
+.gift-card-dialog-container img {
+  height: 40rem;
+}
+
+.gift-card-form {
+  margin: auto;
+}
+
+mat-form-field {
+  width: 27rem;
+}
+
+textarea {
+  min-height: 10rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+input {
+  color: #a63446;
+}
+
+:host ::ng-deep .mat-focused .mat-form-field-label {
+  color: #a63446 !important;
+}
+
+:host ::ng-deep .mat-form-field-label {
+  color: #a63446 !important;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+:host ::ng-deep .mat-form-field-underline .mat-form-field-ripple {
+  background-color: #a63446 !important;
+}
+
+:host ::ng-deep .mat-form-field-underline {
+  background-color: #a63446 !important;
+}
+
+:host ::ng-deep .mat-option-text {
+  color: #a63446 !important;
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 500;
+}
+
+:host ::ng-deep input::-webkit-input-placeholder {
+  color: #a63446 !important;
+}
+
+:host ::ng-deep input:-moz-placeholder {
+  color: #a63446 !important;
+}
+
+:host ::ng-deep input::-moz-placeholder {
+  color: #a63446 !important;
+}
+
+:host ::ng-deep input:-ms-input-placeholder {
+  color: #a63446 !important;
+}
+
+:host
+  ::ng-deep
+  .mat-form-field-appearance-outline
+  .mat-form-field-outline-thick {
+  color: #a63446 !important;
+}

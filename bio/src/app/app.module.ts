@@ -24,8 +24,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './components/account/account.component';
 import { AuthRouterComponent } from './components/auth-router/auth-router.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { GiftCardDialogComponent } from './components/gift-card-dialog/gift-card-dialog.component';
+import { GiftCardComponent } from './components/gift-card/gift-card.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
 import { MonthlyCardComponent } from './components/monthly-card/monthly-card.component';
@@ -38,8 +41,6 @@ import {
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { YearlyCardComponent } from './components/yearly-card/yearly-card.component';
 import { AuthService } from './services/auth.service';
-import { CheckoutComponent } from './components/checkout/checkout.component';
-import { GiftCardComponent } from './components/gift-card/gift-card.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { GiftCardComponent } from './components/gift-card/gift-card.component';
     YearlyCardComponent,
     SubscriptionOnboardingComponent,
     CheckoutComponent,
-    GiftCardComponent
+    GiftCardComponent,
+    GiftCardDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -91,6 +93,7 @@ import { GiftCardComponent } from './components/gift-card/gift-card.component';
       useValue: {}
     }
   ],
+  entryComponents: [GiftCardDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

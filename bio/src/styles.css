@@ -182,13 +182,14 @@ textarea {
 }
 
 .card-title {
+  margin: 1rem;
   font-size: 1.5rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #ffede5 50%);
 }
 
 .card-content {
   height: 15rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .card-info {
@@ -199,10 +200,6 @@ textarea {
 
 .card-conditions {
   font-size: 1rem;
-  margin: 2rem;
-}
-
-.card-actions {
   margin: 2rem;
 }
 
@@ -220,4 +217,14 @@ textarea {
   text-align: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.dialog-container .mat-dialog-container {
+  margin: 2rem;
+  padding: 0;
+}
+
+.cdk-global-scrollblock {
+  position: static;
+  overflow: hidden !important;
 }

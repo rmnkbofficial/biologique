@@ -1,0 +1,53 @@
+<div
+  class="gift-card-dialog-container background-glow"
+  aria-label="Modal dialogue cadeau"
+  fxLayout="row"
+>
+  <img src="../../../assets/gift-card-3.jpg" />
+  <form class="gift-card-form " fxLayout="column" [formGroup]="giftForm">
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="name"
+        id="gift-card-to"
+        maxlength="30"
+        placeholder="Recipient's Name:"
+        required
+        type="text"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="email"
+        id="gift-card-email"
+        placeholder="Recipient's Email:"
+        required
+        type="email"
+    /></mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="from"
+        id="gift-card-from"
+        maxlength="30"
+        placeholder="Sender's Name:"
+        required
+        type="text"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <textarea
+        matInput
+        formControlName="message"
+        id="gift-card-message"
+        maxlength="1000"
+        required
+        placeholder="Because no one wants another votive candle. Here's something you'll actually use. ❤"
+      ></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="submit" class="p600 background-red white">
+      Save
+    </button>
+  </form>
+</div>

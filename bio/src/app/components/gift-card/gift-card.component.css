@@ -39,3 +39,54 @@ h2 {
   margin-top: 23px;
   padding-bottom: 1rem;
 }
+
+.gift-banner {
+  width: 100vw;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  height: auto;
+  letter-spacing: 0.08em;
+  min-height: 40px;
+  text-transform: uppercase;
+}
+
+.gift-banner p {
+  display: inline-block;
+  line-height: 20px;
+  padding: 10px 0px;
+}
+
+.gift-subscription-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 35rem;
+  width: 35rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-position: top;
+}
+
+.three-month-card {
+  background-image: url('../../../assets/gift-card-3.jpg');
+}
+
+.six-month-card {
+  background-image: url('../../../assets/gift-card-6.jpeg');
+}
+
+.gift-card-group {
+  width: 100%;
+}
+
+.gift-button {
+  width: 17.5rem;
+  margin: auto;
+}
+
+.gift-card-text {
+  align-self: center;
+  margin: auto;
+  text-align: left;
+}
