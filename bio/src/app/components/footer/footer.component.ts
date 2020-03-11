@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 
+import { FirebaseService } from '../../services/firebase/firebase.service';
 import { GiftCardRedeemComponent } from '../gift-card-redeem/gift-card-redeem.component';
 
 @Component({
@@ -10,7 +11,13 @@ import { GiftCardRedeemComponent } from '../gift-card-redeem/gift-card-redeem.co
 })
 export class FooterComponent implements OnInit {
   currentYear = new Date().getFullYear();
-  constructor(public dialog: MatDialog) {}
+  email: string;
+  checked = false;
+  constructor(
+    public dialog: MatDialog,
+    private firebaseService: FirebaseService,
+    private snackbar: MatSnackBar
+  ) {}
 
   ngOnInit() {}
 
@@ -22,5 +29,45 @@ export class FooterComponent implements OnInit {
       hasBackdrop: true,
       panelClass: 'dialog-container'
     });
+  }
+
+  check() {
+    this.checked = !this.checked;
+  }
+
+  submit() {
+    if (this.checked) {
+      this.firebaseService.submitEmail(this.email).then(res => {
+        if (res.id) {
+          this.snackbar.open(`Thanks, we'll be in touch soon.`, 'Ok', {
+            duration: 5000,
+            verticalPosition: 'top',
+            horizontalPosition: 'end',
+            politeness: 'polite',
+            panelClass: 'snackbar'
+          });
+        } else {
+          this.snackbar.open(
+            `Uh oh. Something went wrong. Please try again later.`,
+            'Ok',
+            {
+              duration: 5000,
+              verticalPosition: 'top',
+              horizontalPosition: 'end',
+              politeness: 'polite',
+              panelClass: 'snackbar'
+            }
+          );
+        }
+      });
+    } else {
+      this.snackbar.open(`Please accept the terms and conditions.`, 'Ok', {
+        duration: 5000,
+        verticalPosition: 'top',
+        horizontalPosition: 'end',
+        politeness: 'polite',
+        panelClass: 'snackbar'
+      });
+    }
   }
 }

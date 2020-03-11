@@ -6,7 +6,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 
-import { User } from '../models/User';
+import { User } from '../../models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -89,7 +89,7 @@ export class AuthService {
         const displayName = `${firstName} ${lastName}`;
         result.user.updateProfile({ displayName });
         this.sendVerificationMail();
-        this.setUserData(result.user, firstName, lastName);
+        this.setUserData(result.user);
       })
       .catch(error => {
         this.snackbar.open(`${error}`, 'Ok', {
@@ -160,20 +160,16 @@ export class AuthService {
       });
   }
 
-  setUserData(user, firstName?, lastName?) {
+  setUserData(user) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
       `users/${user.uid}`
     );
-    const userData: User = {
+    const userData = {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
-      firstName,
-      lastName,
-      subscriptionType: null,
       emailVerified: user.emailVerified
     };
-
     return userRef.set(userData, {
       merge: true
     });

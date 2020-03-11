@@ -36,3 +36,14 @@ h3 {
   padding: 2rem;
   text-align: left;
 }
+
+.modify-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.detailsForm {
+  padding: 74px 62px;
+}

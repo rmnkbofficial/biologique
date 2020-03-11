@@ -50,21 +50,30 @@
       <mat-form-field>
         <input
           matInput
+          [(ngModel)]="email"
           type="email"
-          id="footer-email"
-          formControlName="email"
+          autocomplete="email"
           placeholder="Enter email"
+          name="email"
+          required
         />
       </mat-form-field>
       <span>
-        <mat-checkbox class="footer-accept"> </mat-checkbox>
+        <mat-checkbox
+          [checked]="checked"
+          class="footer-accept"
+          (change)="check()"
+        >
+        </mat-checkbox>
         <label
           >I agree to receive (really fun) emails from Codebio and accept their
           <a href="">Privacy Policy</a></label
         >
       </span>
       <div fxLayout="column">
-        <button class="footer-submit" type="submit">Subscribe</button>
+        <button class="footer-submit" type="submit" (click)="submit()">
+          Subscribe
+        </button>
       </div>
     </form>
   </div>

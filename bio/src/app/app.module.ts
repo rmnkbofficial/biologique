@@ -43,7 +43,7 @@ import {
 } from './components/subscription-onboarding/subscription-onboarding.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { YearlyCardComponent } from './components/yearly-card/yearly-card.component';
-import { AuthService } from './services/auth.service';
+import { AuthService } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [

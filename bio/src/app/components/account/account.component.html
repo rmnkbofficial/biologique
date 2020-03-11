@@ -2,7 +2,7 @@
   <div class="header" fxLayout="column" fxLayoutAlign="start start">
     <h1 class="p700">
       Bonjour,
-      {{ authService.userData ? authService.userData.displayName : 'toi' }} !
+      {{ user ? user.displayName : 'toi' }} !
     </h1>
     <h2 class="p700">
       It's nice to see you here.
@@ -26,13 +26,75 @@
         </div>
       </mat-tab>
       <mat-tab label="Mon profil">
-        <div class="tab-section background-white" fxLayout="row">
+        <div
+          class="tab-section background-white"
+          *ngIf="!isEditMode"
+          fxLayout="row"
+        >
           <h3 class="p700 " fxLayoutAlign="center center">Mes détails</h3>
           <div class="user-info" fxLayout="column" fxLayoutAlign="center start">
             <p class="p700 ">{{ user.displayName }}</p>
             <p class="p700 ">{{ user.email }}</p>
             <p class="p700 ">********</p>
           </div>
+          <button
+            class="modify-button p700 background-glow red"
+            (click)="isEditMode = !isEditMode"
+          >
+            <span>Edit</span>
+          </button>
+        </div>
+        <div *ngIf="isEditMode" class="tab-section background-white">
+          <form class="detailsForm" [formGroup]="detailsForm" fxLayout="column">
+            <label class="p700 red">Your details</label>
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="firstName"
+                placeholder="Prénom"
+                type="text"
+                name="firstName"
+                autocomplete="name"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="lastName"
+                placeholder="Nom"
+                type="text"
+                name="lastName"
+                autocomplete="name"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="email"
+                placeholder="Email"
+                type="email"
+                name="email"
+                autocomplete="email"
+                email
+              />
+            </mat-form-field>
+            <div fxLayoutAlign="center">
+              <button
+                mat-raised-button
+                class="p700 background-red glow"
+                (click)="updateUserInfo()"
+                [disabled]="detailsForm.invalid"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+          <button
+            class="modify-button p700 background-glow red"
+            (click)="isEditMode = !isEditMode"
+          >
+            <span>Close</span>
+          </button>
         </div>
       </mat-tab>
       <mat-tab label="Déconnexion">

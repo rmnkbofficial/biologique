@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   min-height: 6rem;
+  padding: 0.5rem;
 }
 
 .logo {
@@ -15,12 +16,12 @@
 }
 
 .nav-list {
-  margin-left: 20rem;
+  margin-left: 6rem;
 }
 
 .nav-item {
   display: inline-block;
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .nav-link,

@@ -35,11 +35,15 @@ h2 {
   padding-bottom: 1rem;
 }
 
+.gift-card-group {
+  width: 100%;
+}
+
 .gift-subscription-card {
   background-size: cover;
   background-repeat: no-repeat;
-  height: 35rem;
-  width: 35rem;
+  height: 22rem;
+  width: auto;
   border-radius: 12px;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -54,8 +58,8 @@ h2 {
   background-image: url('../../../assets/gift-card-6.jpeg');
 }
 
-.gift-card-group {
-  width: 100%;
+.twelve-month-card {
+  background-image: url('../../../assets/banner.png');
 }
 
 .gift-button {

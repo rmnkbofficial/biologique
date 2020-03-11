@@ -95,5 +95,24 @@
         $54 — Add to bag
       </button>
     </div>
+    <div fxLayout="column">
+      <mat-card
+        class="gift-subscription-card twelve-month-card"
+        fxLayoutAlign="center center"
+      >
+        <h2 class="gift-card-text p700">
+          <em>Let's gift</em>
+          <div>12 months</div>
+        </h2>
+      </mat-card>
+      <button
+        mat-raised-button
+        class="gift-button background-red white p600"
+        fxLayoutAlign="center center"
+        (click)="openDialog(12)"
+      >
+        $108 — Add to bag
+      </button>
+    </div>
   </div>
 </section>
