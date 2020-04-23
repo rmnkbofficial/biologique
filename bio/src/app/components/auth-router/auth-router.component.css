@@ -1,7 +1,3 @@
-input {
-  color: #2f30be;
-}
-
 h1 {
   margin-bottom: 2rem;
 }
@@ -9,23 +5,6 @@ h1 {
 h3 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-:host ::ng-deep .mat-focused .mat-form-field-label {
-  color: #a63446 !important;
-}
-
-:host ::ng-deep .mat-form-field-label {
-  color: #a63446 !important;
-  font-family: 'Poppins', sans-serif !important;
-}
-
-:host ::ng-deep .mat-form-field-underline .mat-form-field-ripple {
-  background-color: #a63446 !important;
-}
-
-:host ::ng-deep .mat-form-field-underline {
-  background-color: #a63446 !important;
 }
 
 :host ::ng-deep .mat-form-field {

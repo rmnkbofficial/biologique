@@ -70,20 +70,20 @@ textarea {
   text-align: center;
 }
 
-.glow {
-  color: #ffede5;
+.blue {
+  color: #dedff1;
 }
 
-.background-glow {
-  background-color: #ffede5;
+.background-blue {
+  background-color: #dedff1;
 }
 
 .red {
-  color: #a63446;
+  color: #ffede5;
 }
 
 .background-red {
-  background-color: #a63446;
+  background-color: #ffede5;
 }
 
 .white {
@@ -92,14 +92,6 @@ textarea {
 
 .background-white {
   background-color: #ffffff;
-}
-
-.blue {
-  color: #2f30be;
-}
-
-.background-blue {
-  background-color: #2f30be;
 }
 
 .rozha {
@@ -166,10 +158,6 @@ textarea {
 
 .auth-link {
   font-size: 1.25rem;
-}
-
-.auth-link:hover {
-  color: #2f30be;
 }
 
 .subscription-card {

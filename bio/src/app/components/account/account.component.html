@@ -1,4 +1,4 @@
-<section class="section background-glow" fxLayoutGap="4rem">
+<section class="section background-blue" fxLayoutGap="4rem">
   <div class="header" fxLayout="column" fxLayoutAlign="start start">
     <h1 class="p700">
       Bonjour,
@@ -20,7 +20,7 @@
           fxLayoutAlign="center center"
           fxLayout="column"
         >
-          <h3 class="p700 ">
+          <h3 class="p700">
             AUCUN ABONNEMENT ENREGISTRÉ
           </h3>
         </div>
@@ -31,14 +31,14 @@
           *ngIf="!isEditMode"
           fxLayout="row"
         >
-          <h3 class="p700 " fxLayoutAlign="center center">Mes détails</h3>
+          <h3 class="p700" fxLayoutAlign="center center">Mes détails</h3>
           <div class="user-info" fxLayout="column" fxLayoutAlign="center start">
-            <p class="p700 ">{{ user.displayName }}</p>
-            <p class="p700 ">{{ user.email }}</p>
-            <p class="p700 ">********</p>
+            <p class="p700">{{ user.displayName }}</p>
+            <p class="p700">{{ user.email }}</p>
+            <p class="p700">********</p>
           </div>
           <button
-            class="modify-button p700 background-glow red"
+            class="modify-button p700 background-blue red"
             (click)="isEditMode = !isEditMode"
           >
             <span>Edit</span>
@@ -81,7 +81,7 @@
             <div fxLayoutAlign="center">
               <button
                 mat-raised-button
-                class="p700 background-red glow"
+                class="p700 background-red blue"
                 (click)="updateUserInfo()"
                 [disabled]="detailsForm.invalid"
               >
@@ -90,7 +90,7 @@
             </div>
           </form>
           <button
-            class="modify-button p700 background-glow red"
+            class="modify-button p700 background-blue red"
             (click)="isEditMode = !isEditMode"
           >
             <span>Close</span>

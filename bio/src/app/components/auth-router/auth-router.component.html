@@ -1,9 +1,9 @@
 <section
-  class="section background-glow"
+  class="section background-blue"
   fxLayout="column"
   fxLayoutAlign="center"
 >
-  <h1 class="red center-text p700">
+  <h1 class="center-text p500">
     Hi! Please enter your email address.
   </h1>
   <div fxLayout="column" fxLayoutAlign="center center">
@@ -29,15 +29,15 @@
       mat-raised-button
       type="submit"
       value="Next"
-      class="p700 background-red glow"
+      class="p700 background-red"
       (click)="checkEmailExists(input.value)"
       [disabled]="emailForm.invalid"
     >
       Next
     </button>
   </div>
-  <h3 class="auth-link p700">
-    <a href="/password" class="red auth-link" fxLayoutAlign="center">
+  <h3 class="auth-link p500">
+    <a href="/password" class="auth-link" fxLayoutAlign="center">
       Forgot password?</a
     >
   </h3>
