@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   z-index: 999;
   top: 0;
   left: 0;
@@ -12,7 +12,9 @@
 }
 
 .logo {
-  margin-top: 3rem;
+  width: 200px;
+  /* margin-top: 3rem; */
+  vertical-align: middle;
 }
 
 .nav-list {
@@ -109,4 +111,8 @@ a {
 
 .cart-icon {
   padding-left: 2rem;
+}
+
+.mat-sidenav-fixed {
+  position: absolute;
 }
