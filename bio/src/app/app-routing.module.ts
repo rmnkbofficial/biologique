@@ -11,9 +11,10 @@ import { LoginComponent } from './components/login/login.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { SignupComponent } from './components/signup/signup.component';
 import {
-    SubscriptionOnboardingComponent
+  SubscriptionOnboardingComponent
 } from './components/subscription-onboarding/subscription-onboarding.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -31,15 +32,16 @@ const routes: Routes = [
   },
   {
     path: 'mon-compte',
-    component: AccountComponent
+    component: AccountComponent,
+    canActivate: [AuthGuard]
   },
-  { path: 'bienvenue', component: SubscriptionOnboardingComponent },
-  { path: 'checkout', component: CheckoutComponent },
-  { path: 'cadeau', component: GiftCardComponent }
+  { path: 'bienvenue', component: SubscriptionOnboardingComponent, canActivate: [AuthGuard] },
+  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
+  { path: 'cadeau', component: GiftCardComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
