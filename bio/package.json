@@ -29,6 +29,7 @@
     "destyle.css": "^1.0.11",
     "firebase": "^7.8.0",
     "firebase-tools": "^7.11.0",
+    "graphql-js-client": "^0.12.0",
     "hammerjs": "^2.0.8",
     "material-design-icons": "^3.0.1",
     "rxjs": "~6.5.3",

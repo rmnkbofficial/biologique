@@ -35,9 +35,9 @@ const routes: Routes = [
     component: AccountComponent,
     canActivate: [AuthGuard]
   },
-  { path: 'bienvenue', component: SubscriptionOnboardingComponent, canActivate: [AuthGuard] },
+  { path: 'bienvenue', component: SubscriptionOnboardingComponent },
   { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
-  { path: 'cadeau', component: GiftCardComponent, canActivate: [AuthGuard] }
+  { path: 'cadeau', component: GiftCardComponent },
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 .title-section {
   height: 110vh;
-  background-image: url('../../../assets/banner.png');
+  background-image: url("../../../assets/banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,38 +37,19 @@ h2 {
 
 .gift-card-group {
   width: 100%;
+  flex-wrap: wrap;
 }
 
-.gift-subscription-card {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 22rem;
-  width: auto;
-  border-radius: 12px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  background-position: top;
+.Product-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.three-month-card {
-  background-image: url('../../../assets/gift-card-3.jpg');
-}
-
-.six-month-card {
-  background-image: url('../../../assets/gift-card-6.jpeg');
-}
-
-.twelve-month-card {
-  background-image: url('../../../assets/banner.png');
-}
-
-.gift-button {
-  width: 17.5rem;
-  margin: auto;
-}
-
-.gift-card-text {
-  align-self: center;
-  margin: auto;
-  text-align: left;
+.Product {
+  flex: 0 1 31%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 3%;
 }
