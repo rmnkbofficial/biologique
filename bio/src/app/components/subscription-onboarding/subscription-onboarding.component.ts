@@ -17,17 +17,19 @@ import { Component, OnInit } from '@angular/core';
     ])
   ]
 })
+
 export class SubscriptionOnboardingComponent implements OnInit {
   stepNumber: string;
   stepTitle: string;
   state: string;
+
   constructor() {
     this.state = 'home';
     this.stepNumber = 'ETAPE 1';
     this.stepTitle = `C'est pour qui ?`;
   }
 
-  ngOnInit() {}
+  ngOnInit() {  }
 
   goTo(step: string) {
     this.state = step;

@@ -2,6 +2,11 @@
   height: 40rem;
 }
 
+.gift-card-dialog-container{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .gift-card-form {
   margin: auto;
 }
@@ -63,4 +68,16 @@ input {
   .mat-form-field-appearance-outline
   .mat-form-field-outline-thick {
   color: #a63446 !important;
+}
+
+@media screen and (max-width:600px){
+  mat-form-field {
+    width: 280px;
+  }
+  .gift-card-dialog-container img {
+    width: 280px;
+  }
+  .form-submit{
+    margin: 0  30px 50px 30px;
+  }
 }

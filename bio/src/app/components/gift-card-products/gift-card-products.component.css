@@ -1,0 +1,41 @@
+.product-image {
+    display: block;
+    min-width: 285px;
+    height: 22rem;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.add-to-cart-container {
+    background: #ffffff;
+    color: #000000;
+    margin: 15px auto;
+    padding: 2px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gift-button {
+    min-width: 285px;
+}
+
+.gift-subscription-card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 22rem;
+    max-width: 285px;
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-position: top;
+}
+
+.gift-card-text {
+    align-self: center;
+    margin: auto !important;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.75rem;
+}

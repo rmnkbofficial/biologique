@@ -7,14 +7,12 @@
     </h1>
   </div>
 </section>
+
 <div class="background-red banner">
   <p class="p700">GIFT THE SUBSCRIPTION</p>
 </div>
-<section
-  class="section gift-body background-blue p500"
-  fxLayoutAlign="center center"
-  fxLayout="column"
->
+
+<section class="section gift-body background-blue p500" fxLayoutAlign="center center" fxLayout="column">
   <div class="gift-title rozha">
     <p>Gift <em>the</em> box subscription</p>
   </div>
@@ -51,68 +49,11 @@
   <div class="gift-title rozha">
     <p>How long should your gift last?</p>
   </div>
-  <div
-    fxLayout="row"
-    class="gift-card-group"
-    fxLayoutAlign="center center"
-    fxLayoutGap="6rem"
-  >
-    <div fxLayout="column">
-      <mat-card
-        class="gift-subscription-card three-month-card"
-        fxLayoutAlign="center center"
-      >
-        <h2 class="gift-card-text p700">
-          <em>Let's gift</em>
-          <div>3 months</div>
-        </h2>
-      </mat-card>
-      <button
-        mat-raised-button
-        class="gift-button background-white p600"
-        fxLayoutAlign="center center"
-        (click)="openDialog(3)"
-      >
-        $27 — Add to bag
-      </button>
-    </div>
-    <div fxLayout="column">
-      <mat-card
-        class="gift-subscription-card six-month-card"
-        fxLayoutAlign="center center"
-      >
-        <h2 class="gift-card-text p700">
-          <em>Let's gift</em>
-          <div>6 months</div>
-        </h2>
-      </mat-card>
-      <button
-        mat-raised-button
-        class="gift-button background-white p600"
-        fxLayoutAlign="center center"
-        (click)="openDialog(6)"
-      >
-        $54 — Add to bag
-      </button>
-    </div>
-    <div fxLayout="column">
-      <mat-card
-        class="gift-subscription-card twelve-month-card"
-        fxLayoutAlign="center center"
-      >
-        <h2 class="gift-card-text p700">
-          <em>Let's gift</em>
-          <div>12 months</div>
-        </h2>
-      </mat-card>
-      <button
-        mat-raised-button
-        class="gift-button background-white p600"
-        fxLayoutAlign="center center"
-        (click)="openDialog(12)"
-      >
-        $108 — Add to bag
-      </button>
+
+  <div class="Product-wrapper">
+    <div *ngFor="let product of products" class="Product">
+      <app-gift-card-products [productInput]="product" (addToCartLineItem)="addLineItemToCart($event)">
+      </app-gift-card-products>
     </div>
   </div>
 </section>

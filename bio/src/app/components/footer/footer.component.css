@@ -1,11 +1,12 @@
 .footer {
   line-height: 27px;
   font-weight: 300;
-  max-width: 1840px;
   overflow-x: hidden;
   position: relative;
+  bottom: 0;
   padding: 90px 40px;
   margin: 0px auto;
+  font-size: 12px;
 }
 
 .footer-column {
@@ -36,4 +37,50 @@
 
 .footer-form {
   margin-top: 1rem;
+}
+
+.round-block {
+  padding: 0px 30px;
+  border: 1px solid black;
+  border-radius: 18px;
+  margin: 35px 5px;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+.mobile-block-1 {
+  border-bottom: 1px solid rgb(236, 238, 247);
+  padding-bottom: 30px;
+}
+
+.mobile-block-2 {
+  border-bottom: 1px solid rgb(236, 238, 247);
+  padding: 40px 0;
+}
+
+.mobile-block-3 {
+  padding: 40px 0 0 0;
+}
+
+.mobile-social-links{
+  padding: 40px 0 0 0;
+}
+
+@media (min-width: 770px) {
+  .mobile-footer {
+    display: none !important;
+  }
+}
+
+@media (max-width: 769px) {
+  .mobile-footer {
+    padding: 70px 40px 40px 40px;
+  }
+
+  .desktop-footer {
+    display: none !important;
+  }
 }

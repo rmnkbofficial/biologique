@@ -44,6 +44,8 @@ import {
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { YearlyCardComponent } from './components/yearly-card/yearly-card.component';
 import { AuthService } from './services/auth/auth.service';
+import { CartComponent } from './components/cart/cart.component';
+import { GiftCardProductsComponent } from './components/gift-card-products/gift-card-products.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { AuthService } from './services/auth/auth.service';
     CheckoutComponent,
     GiftCardComponent,
     GiftCardDialogComponent,
-    GiftCardRedeemComponent
+    GiftCardRedeemComponent,
+    CartComponent,
+    GiftCardProductsComponent
   ],
   imports: [
     BrowserModule,

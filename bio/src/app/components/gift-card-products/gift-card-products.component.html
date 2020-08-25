@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <mat-card class="gift-subscription-card" fxLayoutAlign="center center"
+  [style.background-image]="getLocalPathByDescription((product)?.description)"
+>
+    <h2 class="gift-card-text p700">
+      <em>Let's gift</em>
+      <div>{{(product)?.description}}</div>
+    </h2>
+  </mat-card>
+  <button mat-raised-button class="gift-button background-white p600" fxLayoutAlign="center center"
+    (click)="openDialog()">
+    €{{form.get("variant").value.price}} — Add to bag
+  </button>
+</form>
+
+
+<ng-template #productImageTemplate>
+  <img *ngIf="(product)?.images[0]" [src]="(product)?.images[0].src">
+</ng-template>

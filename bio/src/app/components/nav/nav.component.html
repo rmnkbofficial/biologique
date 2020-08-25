@@ -1,7 +1,7 @@
 <div>
   <mat-toolbar class="navbar">
     <a href="/"> <img class="logo" src="../../../assets/codebio-logo.svg" /></a>
-    <ul title="Main Menu" class="nav-list" fxShow="true" fxHide.lt-md>
+    <ul title="Main Menu" fxShow="true" fxHide.lt-md>
       <li class="nav-item">
         <a href="/concept" class="nav-link p500">Notre concept</a>
       </li>
@@ -19,10 +19,10 @@
       mat-icon-button
       class="navbar-icon-button"
       fxShow="true"
-      fxHide.sm="true"
+      fxHide.lt-md
       aria-label="Side nav toggle icon"
     >
-      <mat-icon class="navbar-icon">shopping_cart</mat-icon>
+      <mat-icon class="navbar-icon" (click)="openCloseCart()">shopping_cart</mat-icon>
     </button>
     <button
       mat-icon-button
@@ -68,7 +68,7 @@
           mat-icon-button
           aria-label="Side nav cart icon"
         >
-          <mat-icon class="sidenav-link">shopping_cart</mat-icon>
+          <mat-icon class="sidenav-link" (click)="openCloseCart()">shopping_cart</mat-icon>
         </button>
         <ul
           fxLayout="row"

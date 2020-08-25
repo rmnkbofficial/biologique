@@ -37,6 +37,10 @@ export class AuthService {
     this.userData = user;
   }
 
+  getUser() {
+   return this.userData;
+  }
+
   accountExists(email) {
     const user = this.afs.collection('/users', ref =>
       ref.where('email', '==', email)

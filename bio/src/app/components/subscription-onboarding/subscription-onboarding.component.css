@@ -19,3 +19,8 @@ h2 {
 .gift-component {
   width: 100%;
 }
+
+.subscription-box-container{
+  flex-wrap: wrap;
+  justify-content: center
+}
