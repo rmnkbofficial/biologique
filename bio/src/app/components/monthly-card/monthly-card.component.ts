@@ -11,7 +11,7 @@ import { ShopifyService } from 'src/app/services/shopify/shopify.service';
 export class MonthlyCardComponent implements OnInit {
   product: Product;
 
-  constructor(    private readonly shopifyService: ShopifyService) { }
+  constructor(private readonly shopifyService: ShopifyService) { }
 
   ngOnInit() {
     this.shopifyService.getProducts().then((products) => {
@@ -23,14 +23,13 @@ export class MonthlyCardComponent implements OnInit {
       });
       this.shopifyService.getProductById(id).then((product) => {
         this.product = product;
-        console.log(this.product, this.product.variants[0]);
       }).catch(err =>
         this.shopifyService.genericSnackBar(err));
     }, err => this.shopifyService.genericSnackBar(err));
   }
 
   monthlySubscribe() {
-    const lineItem = new LineItem( this.product.variants[0], 1);
+    const lineItem = new LineItem(this.product.variants[0], 1);
     this.addToCart(lineItem);
     this.shopifyService.cartOpenClose = true;
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopifyService } from 'src/app/services/shopify/shopify.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +11,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class NavComponent implements OnInit {
   shopTitle: string;
 
-  constructor(private shopifyService: ShopifyService, private snackbar: MatSnackBar) { }
+  constructor(
+    private shopifyService: ShopifyService,
+    private snackbar: MatSnackBar,
+    private router: Router) { }
 
   ngOnInit() {
     this.shopifyService.getCurrentShop().then(

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth/auth.service';
@@ -17,7 +17,7 @@ export class AuthRouterComponent implements OnInit {
 
   ngOnInit() {
     if (JSON.parse(localStorage.getItem('user'))) {
-      this.router.navigate(['mon-compte']);
+      this.router.navigate(['/mon-compte']);
     }
   }
 
@@ -30,9 +30,11 @@ export class AuthRouterComponent implements OnInit {
   checkEmailExists(email: string) {
     this.authService.accountExists(email).subscribe(doc => {
       if (doc[0]) {
+        localStorage.setItem('email', email);
         localStorage.setItem('user', JSON.stringify(doc[0]));
         this.router.navigate(['login']);
       } else {
+        localStorage.setItem('email', email);
         this.router.navigate(['signup']);
       }
     });
