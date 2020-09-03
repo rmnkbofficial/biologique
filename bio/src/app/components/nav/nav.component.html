@@ -1,118 +1,64 @@
 <div>
   <mat-toolbar class="navbar">
-    <a href="/"> <img class="logo" src="../../../assets/codebio-logo.svg" /></a>
+    <a routerLink="/"> <img class="logo" src="../../../assets/codebio-logo.svg" /></a>
     <ul title="Main Menu" fxShow="true" fxHide.lt-md>
       <li class="nav-item">
-        <a href="/concept" class="nav-link p500">Notre concept</a>
+        <a routerLink="/" class="nav-link p500">Notre concept</a>
       </li>
       <li class="nav-item">
-        <a href="/offres" class="nav-link p500">Nos box</a>
+        <a routerLink="/offres" class="nav-link p500">Nos box</a>
       </li>
       <li class="nav-item">
-        <a href="/cadeau" class="nav-link p500">Offrir</a>
+        <a routerLink="/cadeau" class="nav-link p500">Offrir</a>
       </li>
       <li class="nav-item">
-        <a href="/compte" class="nav-link p500">Mon compte</a>
+        <a routerLink="/mon-compte" class="nav-link p500">Mon compte</a>
       </li>
     </ul>
-    <button
-      mat-icon-button
-      class="navbar-icon-button"
-      fxShow="true"
-      fxHide.lt-md
-      aria-label="Side nav toggle icon"
-    >
+    <button mat-icon-button class="navbar-icon-button" fxShow="true" fxHide.lt-md aria-label="Side nav toggle icon">
       <mat-icon class="navbar-icon" (click)="openCloseCart()">shopping_cart</mat-icon>
     </button>
-    <button
-      mat-icon-button
-      class="navbar-toggle"
-      [disableRipple]="true"
-      (click)="sidenav.toggle()"
-      fxShow="true"
-      fxHide.gt-sm
-      aria-label="Side nav cart icon"
-    >
+    <button mat-icon-button class="navbar-toggle" [disableRipple]="true" (click)="sidenav.toggle()" fxShow="true"
+      fxHide.gt-sm aria-label="Side nav cart icon">
       <mat-icon class="navbar-icon white">menu</mat-icon>
     </button>
   </mat-toolbar>
 
   <mat-sidenav-container fxFlexFill class="sidenav-container">
-    <mat-sidenav
-      class="sidenav background-red p700"
-      position="end"
-      #sidenav
-      fixedInViewport="true"
-    >
+    <mat-sidenav class="sidenav background-red p700" position="end" #sidenav fixedInViewport="true">
       <mat-nav-list>
         <ul title="Main Menu" fxLayout="column">
           <li class="nav-item">
-            <a href="/concept" class="sidenav-link p500">Notre concept</a>
+            <a routerLink="/" class="sidenav-link p500">Notre concept</a>
           </li>
           <li class="nav-item">
-            <a href="/offres" class="sidenav-link p500">Nos offres</a>
+            <a routerLink="/offres" class="sidenav-link p500">Nos offres</a>
           </li>
           <li class="nav-item">
-            <a href="/cadeau" class="sidenav-link p500">Offrir</a>
+            <a routerLink="/cadeau" class="sidenav-link p500">Offrir</a>
           </li>
         </ul>
-        <button
-          mat-icon-button
-          class="cart-icon"
-          aria-label="Side nav login/signup button"
-        >
-          <mat-icon class="sidenav-link">account_circle</mat-icon>
+        <button mat-icon-button class="cart-icon" aria-label="Side nav login/signup button">
+          <mat-icon class="sidenav-link" (click)="router.navigate(['mon-compte'])">account_circle</mat-icon>
         </button>
-        <button
-          class="cart-icon"
-          mat-icon-button
-          aria-label="Side nav cart icon"
-        >
+        <button class="cart-icon" mat-icon-button aria-label="Side nav cart icon">
           <mat-icon class="sidenav-link" (click)="openCloseCart()">shopping_cart</mat-icon>
         </button>
-        <ul
-          fxLayout="row"
-          class="navbar-mobile-socials"
-          fxLayoutAlign="space-between"
-        >
+        <ul fxLayout="row" class="navbar-mobile-socials" fxLayoutAlign="space-between">
           <li class="navbar-social-item">
-            <a
-              href="https://twitter.com/"
-              class="navbar-mobile-link"
-              rel="noopener nofollow"
-              target="_blank"
-              ><img
-                src="../../assets/twitter-icon.svg"
-                class="navbar-social-icon"
-              />
-              <span class="homepage-link">Twitter</span></a
-            >
+            <a href="https://twitter.com/" class="navbar-mobile-link" rel="noopener nofollow" target="_blank"><img
+                src="../../assets/twitter-icon.svg" class="navbar-social-icon" />
+              <span class="homepage-link">Twitter</span></a>
           </li>
           <li class="navbar-social-item">
-            <a
-              href="https://www.instagram.com/"
-              rel="noopener nofollow"
-              target="_blank"
-              class="navbar-mobile-link"
-              ><img
-                src="../../assets/instagram-icon.svg"
-                class="navbar-social-icon"
-              />
-              <span class="homepage-link">Instagram</span></a
-            >
+            <a href="https://www.instagram.com/" rel="noopener nofollow" target="_blank" class="navbar-mobile-link"><img
+                src="../../assets/instagram-icon.svg" class="navbar-social-icon" />
+              <span class="homepage-link">Instagram</span></a>
           </li>
           <li class="navbar-social-item">
-            <a
-              href="https://www.facebook.com/"
-              rel="noopener nofollow"
-              target="_blank"
-              class="navbar-mobile-link"
-              ><img
-                src="../../assets/facebook-icon.svg"
-                class="navbar-social-icon"
-              />
-              <span class="homepage-link">Facebook</span></a
-            >
+            <a href="https://www.facebook.com/" rel="noopener nofollow" target="_blank" class="navbar-mobile-link"><img
+                src="../../assets/facebook-icon.svg" class="navbar-social-icon" />
+              <span class="homepage-link">Facebook</span></a>
           </li>
         </ul>
       </mat-nav-list>

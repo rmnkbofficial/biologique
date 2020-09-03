@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { User } from '../../models/User';
 import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
@@ -13,7 +11,8 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
   user: any;
-  constructor(public authService: AuthService, private router: Router) {}
+
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.user = JSON.parse(localStorage.getItem('user'));

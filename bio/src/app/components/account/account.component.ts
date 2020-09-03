@@ -22,12 +22,14 @@ export class AccountComponent implements OnInit {
     public authService: AuthService,
     private firebaseService: FirebaseService,
     private snackbar: MatSnackBar
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.user = JSON.parse(localStorage.getItem('user'));
     this.newUser = this.firebaseService.getUserInfoById(this.user.uid)[0];
-    localStorage.setItem('user', JSON.stringify(this.newUser));
+    if (this.newUser) {
+      localStorage.setItem('user', JSON.stringify(this.newUser));
+    }
     this.createForm();
   }
 

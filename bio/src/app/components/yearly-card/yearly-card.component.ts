@@ -25,7 +25,6 @@ export class YearlyCardComponent implements OnInit {
       });
       this.shopifyService.getProductById(id).then((product) => {
         this.product = product;
-        console.log(this.product, this.product.variants[0]);
       }).catch(err =>
         this.shopifyService.genericSnackBar(err));
     }, err => this.shopifyService.genericSnackBar(err));

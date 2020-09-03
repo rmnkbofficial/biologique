@@ -21,14 +21,18 @@ export class AuthService {
     public ngZone: NgZone,
     private snackbar: MatSnackBar
   ) {
+    this.authenticateUser();
+  }
+
+  authenticateUser() {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem('email', this.userData.email);
       } else {
         localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem('email', null);
       }
     });
   }
@@ -38,7 +42,7 @@ export class AuthService {
   }
 
   getUser() {
-   return this.userData;
+    return this.userData;
   }
 
   accountExists(email) {
@@ -59,7 +63,9 @@ export class AuthService {
         if (result.user.emailVerified) {
           this.setUserData(result.user);
           this.ngZone.run(() => {
-            this.router.navigate(['mon-compte']);
+            setTimeout(() => {
+              this.router.navigate(['mon-compte']);
+            }, 1000);
           });
         } else {
           this.snackbar.open(
@@ -149,7 +155,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then(result => {
         this.ngZone.run(() => {
-          this.router.navigate(['submit']);
+          this.router.navigate(['login']);
         });
         this.setUserData(result.user);
       })

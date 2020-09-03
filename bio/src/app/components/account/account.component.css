@@ -47,3 +47,33 @@ h3 {
 .detailsForm {
   padding: 74px 62px;
 }
+
+@media screen and (max-width: 600px){
+  h1 {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .section {
+    padding: 13rem 0rem 1rem 0rem;
+  }
+
+  .tab-section {
+    padding: 1rem;
+    width: 100vw;
+  }
+  
+  h3 {
+    padding: 0px;
+  }
+  
+  p{
+    max-width: 100%;
+    word-break: break-all;
+  }
+}
